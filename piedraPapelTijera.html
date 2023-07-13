@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera PB </title>
+</head>
+
+<body>
+    <h1>Piedra, Papel o Tijera</h1>
+    <script>
+        function aleatorio( minima, maxima) {
+           return Math.floor(Math.random() * (maxima - minima + 1)+ minima )
+        }
+        // 1 es piedra, 2 es papel, 3 es tijera 
+        let jugador = 0
+        //let minima = 1
+        //let maxima = 3
+       // let Pc = Math.floor(Math.random() * (maxima - minima + 1)+ minima )
+       let Pc = aleatorio(1,3)
+       jugador = prompt("Elige: 1 para piedra. 2 para papel, 3 para tijera")
+        //alert("Elegiste " + jugador)
+        if (jugador == 1) {
+            alert("Elegiste 🪨")
+        }else if (jugador == 2) {
+            alert("Elegiste 🗞️")
+        }else if (jugador == 3) {
+            alert("Elegiste ✂️")
+        }else{
+            alert("Elegiste Perder, jajajajaja")
+        }
+        if (Pc == 1) {
+            alert("PC elige 🪨")
+        }else if (Pc == 2) {
+            alert("PC elige 🗞️")
+        }else if (Pc == 3) {
+            alert("PC elige ✂️")
+        }
+        //COMBATE 
+        if (Pc == jugador) {
+            alert("Empate")
+        }else if (jugador == 1 && Pc == 3) {
+            alert("Ganaste")
+        }else if (jugador == 2 && Pc == 1) {
+            alert("Ganaste")
+        }else if (jugador == 3 && Pc == 2) {
+            alert("Ganaste")
+        }else {
+            alert("Perdedor jajajaja")
+        }
+    </script>
+</body>
+
+</html>
